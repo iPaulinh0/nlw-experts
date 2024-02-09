@@ -71,6 +71,8 @@ const template = document.querySelector("template")
 const corrects = new Set()
 const totalQuestions = perguntas.length
 const showTotal = document.querySelector("#acertos span")
+const submitTotal = document.querySelector("#acertosSubmit")
+const button = document.querySelector("button")
 
 for (const item of perguntas) {
   const quizItem = template.content.cloneNode(true)
@@ -90,12 +92,17 @@ for (const item of perguntas) {
       corrects.delete(item)
       if (isCorrect) {
         corrects.add(item)
+        button.style.display = "block"
       }
       showTotal.textContent = corrects.size + " de " + totalQuestions
     }
     quizItem.querySelector("dl").appendChild(dt)
   }
   quizItem.querySelector("dl dt").remove()
+
+  button.addEventListener("click", () => {
+    window.location.href = "./submit.html"
+  })
 
   quiz.appendChild(quizItem)
 }

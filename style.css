@@ -124,6 +124,26 @@ input:checked:before {
   background-color: #74fc59;
 }
 
+button {
+  margin-top: 30px;
+
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+
+  background-color: #74fc59;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: background-color 0.2s;
+  display: none;
+}
+
+button:hover {
+  background-color: #a3fb92;
+}
+
 #acertos {
   text-align: center;
   background-color: #74fc59;
@@ -136,6 +156,28 @@ input:checked:before {
   padding: 12px;
 }
 
+#submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+
+  margin: auto;
+}
+
+#submit img {
+  width: 40%;
+}
+
+#submit span {
+  font-size: 30px;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-top: 10px;
+}
+
 @media (max-width: 640px) {
   header h1 {
     font-size: 20px;
@@ -143,5 +185,36 @@ input:checked:before {
 
   .quiz-item h3 {
     font-size: 16px;
+  }
+
+  #submit img {
+    width: 40%;
+  }
+
+  #submit span {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+    max-width: 980px;
+  }
+
+  header h1 {
+    font-size: 30px;
+  }
+
+  .quiz-item h3 {
+    font-size: 22px;
+  }
+
+  .quiz-item dl dt {
+    font-size: 18px;
+  }
+
+  #acertos {
+    font-size: 20px;
   }
 }
