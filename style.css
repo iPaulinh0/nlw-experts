@@ -135,3 +135,13 @@ input:checked:before {
   width: 100%;
   padding: 12px;
 }
+
+@media (max-width: 640px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  .quiz-item h3 {
+    font-size: 16px;
+  }
+}
